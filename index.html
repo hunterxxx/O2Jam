@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Go2Jam</title>
+  <link rel="stylesheet" href="./app/stylesheets/reset.css">
+  <link rel="stylesheet" href="canvas.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu" rel="stylesheet">
+  <script src="https://use.fontawesome.com/4db037443e.js"></script>
+  <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+  <audio id="cyf">
+    <source src="./songs/audio/christmas.mp3" type="audio/mp3">
+  </audio>
+  <audio id="gd">
+    <source src="./songs/audio/gd.mp3" type="audio/mp3">
+  </audio>
+  <div class="modal-container" id="modal-container">
+    <div class="modal hidden" id="score-modal">
+      <h1>Nice Job!</h1>
+      <p id="score-p"></p>
+      <p>Press ENTER to go back to the main menu</p>
+      <div class="author">
+        <p>Created by: Brendan Ko</p>
+        <ul class="portfolio-icons">
+          <li><a target="_blank" href="http://brendanko.com/"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://github.com/brenny0707"><i class="fa fa-github"
+                aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/brenny0707/"><i class="fa fa-linkedin-square"
+                aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://angel.co/brendan-ko?public_profile=1"><i class="fa fa-angellist"
+                aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal" id="intro-modal">
+      <h1>Go2Jam!</h1>
+      <div class="modal-instructions">
+        <p>Use F, G, H, and J to hit the corresponding note!</p>
+        <br>
+        <p>Time the notes when they are in the bar for higher scores and combos!</p>
+      </div>
+      <ul class="song-list">
+        <h2>Song List</h2>
+        <li class="song-li">
+          <p class="song-title">Can You Feel</p>
+          <button class="easy difficulty-button" type="button" name="cyf" value="easy">Easy</button>
+          <button class="hard difficulty-button" type="button" name="cyf" value="hard">Hard</button>
+        </li>
+      </ul>
+      <div class="author">
+        <p>Created by: Hunter</p>
+        <ul class="portfolio-icons">
+          <li><a target="_blank" href="http://brendanko.com/"><i class="fa fa-globe" aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://github.com/brenny0707"><i class="fa fa-github"
+                aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://www.linkedin.com/in/brenny0707/"><i class="fa fa-linkedin-square"
+                aria-hidden="true"></i></a></li>
+          <li><a target="_blank" href="https://angel.co/brendan-ko?public_profile=1"><i class="fa fa-angellist"
+                aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="go2jam-container">
+    <div class="canvas-div">
+      <canvas id="outer-canvas" width="700" height="700"></canvas>
+      <canvas id="0" width="500" height="700"></canvas>
+      <canvas id="1" width="500" height="700"></canvas>
+      <canvas id="2" width="500" height="700"></canvas>
+      <canvas id="3" width="500" height="700"></canvas>
+      <canvas id="board" width="500" height="700">
+        This browser does not support Go2Jam :(
+      </canvas>
+    </div>
+  </div>
+</body>
+<script src="bundle.js"></script>
+
+</html>

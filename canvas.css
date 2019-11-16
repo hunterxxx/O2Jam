@@ -1,0 +1,176 @@
+body {
+  background-color: grey;
+}
+
+.go2jam-container {
+
+}
+.canvas-div {
+  margin: 0 auto;
+  position: relative;
+  width: 900px;
+  height: 700px;
+}
+
+canvas {
+  position: absolute;
+  top: 0px;
+  left: 150px;
+  margin: 0 auto;
+  border: 5px solid black;
+  background-color: transparent;
+}
+
+.board {
+  z-index: 50;
+  background-color: transparent;
+}
+
+#outer-canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0 auto;
+  border: 5px solid black;
+  background-color: #F7F7F7;
+}
+
+/*modal css*/
+
+.modal-container {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-65% , -65%);
+  background: rgba(82,172,255,.7);
+  height: 75%;
+  max-width: 650px;
+  max-height: 650px;
+  width: 50%;
+  border-radius: 50px;
+  /*font-family: 'Roboto', sans-serif;*/
+
+}
+
+.modal > * {
+  margin-top: 3%;
+  width: 70%;
+  box-sizing: border-box;
+  padding: 1%;
+  background-color: #D7D7D7;
+  border-radius: 10px;
+}
+
+.modal * {
+  font-family: 'Baloo Tammudu', cursive;
+}
+
+.modal h1 {
+  text-align: center;
+  padding-top: 30px;
+  letter-spacing: 2px;
+  font-size: 60px;
+  font-weight: bolder;
+  font-style: italic;
+  background: -webkit-linear-gradient(#FDFDF7, #C6C6C4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  tex
+}
+
+.modal h2 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal > * {
+  margin: 0 auto;
+  padding: 15px 0 15px 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal > ul {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.song-li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.song-li > .difficulty-button {
+    border-radius: 5px;
+    text-align: center;
+    min-width: 15%;
+}
+
+.song-li > .easy {
+  background-color: green;
+}
+
+.song-li > .hard {
+  background-color: orange;
+}
+
+.song-title {
+  width: 50%;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.author > * {
+  margin: 0 auto;
+}
+.portfolio-icons{
+  display: flex;
+  flex-direction: row;
+}
+
+.portfolio-icons > li {
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+a {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
