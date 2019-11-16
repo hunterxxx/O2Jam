@@ -38,30 +38,30 @@ class BeatMap {
     };
   }
   addNotes(colNum) {
-    if(this.notes[colNum][0] <= this.currentTime - this.startTime) {
+    if (this.notes[colNum][0] <= this.currentTime - this.startTime) {
       this.cols[colNum].addBeat(colNum);
       this.notes[colNum].shift();
     }
   }
 
   drawBeatMap() {
-      let missedNotes0 = this.cols[0].drawBeats(this.comboCounter, this.speed);
-      let missedNotes1 =this.cols[1].drawBeats(this.comboCounter, this.speed);
-      let missedNotes2 =this.cols[2].drawBeats(this.comboCounter, this.speed);
-      let missedNotes3 =this.cols[3].drawBeats(this.comboCounter, this.speed);
-      // this.comboCounter = missedNotes0.combo;
-      // this.comboCounter = missedNotes1.combo;
-      // this.comboCounter = missedNotes2.combo;
-      // this.comboCounter = missedNotes3.combo;
-      if (missedNotes0.combo === 0 || missedNotes1.combo === 0 || missedNotes2.combo === 0 || missedNotes3.combo === 0) {
-        this.comboCounter = 0;
-      }
-      this.currentTime = new Date().getTime();
-      this.displayScore();
+    let missedNotes0 = this.cols[0].drawBeats(this.comboCounter, this.speed);
+    let missedNotes1 = this.cols[1].drawBeats(this.comboCounter, this.speed);
+    let missedNotes2 = this.cols[2].drawBeats(this.comboCounter, this.speed);
+    let missedNotes3 = this.cols[3].drawBeats(this.comboCounter, this.speed);
+    // this.comboCounter = missedNotes0.combo;
+    // this.comboCounter = missedNotes1.combo;
+    // this.comboCounter = missedNotes2.combo;
+    // this.comboCounter = missedNotes3.combo;
+    if (missedNotes0.combo === 0 || missedNotes1.combo === 0 || missedNotes2.combo === 0 || missedNotes3.combo === 0) {
+      this.comboCounter = 0;
+    }
+    this.currentTime = new Date().getTime();
+    this.displayScore();
   }
 
   displayScore() {
-    this.ctx.clearRect(0,0,this.scoreCanvas.width, this.scoreCanvas.height);
+    this.ctx.clearRect(0, 0, this.scoreCanvas.width, this.scoreCanvas.height);
     this.ctx.font = '20px Roboto';
     this.ctx.fillText(`Score`, this.scoreCanvas.width * .03, this.scoreCanvas.height * .2);
     this.ctx.fillText(`${this.score}`, this.scoreCanvas.width * .03, this.scoreCanvas.height * .25);
@@ -75,7 +75,7 @@ class BeatMap {
     this.comboCounter = hitResult.combo;
     // this.beatLogger[colNum].push(Math.round((this.currentTime - this.startTime)/10)*10 - (380 * this.speed));
 
-    this.beatLogger[colNum].push(Math.round((this.currentTime - this.startTime)/10)*10 - (380 * 3) - 80 );
+    this.beatLogger[colNum].push(Math.round((this.currentTime - this.startTime) / 10) * 10 - (380 * 3) - 80);
     // + 400
     //BEATLOGGER, DO NOT DELETE!!!
     // console.log(this.beatLogger);
