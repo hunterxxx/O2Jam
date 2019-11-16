@@ -1,22 +1,15 @@
 {
-  "name": "Go2Jam",
+  "name": "o2jam",
   "version": "1.0.0",
-  "description": "## MVP Go2Jam is a rhythm game that uses a variety of keyboard buttons to hit notes (this version uses four keys). Core features include:",
+  "description": "O2Jam is a rhythm game that uses a variety of keyboard buttons to hit notes (this version uses four keys). Core features include:",
   "main": "canvas.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brenny0707/Go2Jam.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brenny0707/Go2Jam/issues"
-  },
   "homepage": "https://github.com/brenny0707/Go2Jam#readme",
   "dependencies": {
     "babel-core": "^6.26.0",

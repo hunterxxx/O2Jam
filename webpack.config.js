@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./go2jam.js",
+  entry: "./o2jam.js",
   target: 'node',
   output: {
     filename: './bundle.js'
