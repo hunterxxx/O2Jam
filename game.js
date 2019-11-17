@@ -7,11 +7,12 @@ class Game {
   constructor() {
     this.canvas = document.getElementById('board');
     this.ctx = this.canvas.getContext('2d');
+    this.origShadowColor = this.ctx.shadowColor;
     this.firedKeys = {
+      d: false,
       f: false,
-      g: false,
-      h: false,
       j: false,
+      k: false,
     };
     this.beatMap = null;
     this.drawBorder = this.drawBorder.bind(this);
@@ -80,23 +81,31 @@ class Game {
       this.firedKeys[key] = true;
       this.ctx.globalCompositeOperation = 'source-over';
       this.ctx.fillStyle = 'rgba(0, 0, 255, .6)';
-      this.ctx.fillRect(this.canvas.width * .25 * num, this.canvas.height * .75, this.canvas.width * .25, this.canvas.height * .1);
-    }
 
+      this.ctx.shadowColor = 'red';
+      this.ctx.shadowBlur = 15;
+      this.ctx.fillRect(this.canvas.width * .25 * num, this.canvas.height * .75, this.canvas.width * .25, this.canvas.height * .1);
+
+    }
   }
 
   keyUp(num, key) {
     this.firedKeys[key] = false;
     if (this.firedKeys["d"] === false && this.firedKeys["f"] === false && this.firedKeys["j"] === false && this.firedKeys["k"] === false) {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      this.ctx.shadowColor = this.origShadowColor;
+
       this.drawBorder();
     }
     else {
       this.ctx.clearRect(this.canvas.width * .25 * num, this.canvas.height * .75, this.canvas.width * .25, this.canvas.height * .1);
-      this.drawBorder();
-    }
+      this.ctx.shadowColor = this.origShadowColor;
 
+      this.drawBorder();
+
+    }
   }
+
   playCurrentSong(songTag, difficulty) {
     let selectedSong = SongList[songTag];
     this.beatMap = new BeatMap(
