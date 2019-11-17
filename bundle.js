@@ -575,8 +575,13 @@ var Game = function () {
   _createClass(Game, [{
     key: 'drawBorder',
     value: function drawBorder() {
-      this.ctx.fillStyle = 'rgba(255, 215, 0, .6)';
-      var timingBar = this.ctx.fillRect(0, this.canvas.height * .75, this.canvas.width, this.canvas.height * .1);
+      this.ctx.fillStyle = '#26b2e0';
+      var timingBar1 = this.ctx.fillRect(0, this.canvas.height * .75, this.canvas.width * .25, this.canvas.height * .1);
+      var timingBar4 = this.ctx.fillRect(this.canvas.width * .50, this.canvas.height * .75, this.canvas.width * .25, this.canvas.height * .1);
+      this.ctx.fillStyle = 'grey';
+      var timingBar2 = this.ctx.fillRect(this.canvas.width * .25, this.canvas.height * .75, this.canvas.width * .25, this.canvas.height * .1);
+      var timingBar3 = this.ctx.fillRect(this.canvas.width * .75, this.canvas.height * .75, this.canvas.width * .25, this.canvas.height * .1);
+
       this.ctx.fillStyle = 'black';
       for (var x = this.canvas.width / 4; x < this.canvas.width; x += this.canvas.width / 4) {
         this.ctx.fillRect(x, 0, 5, 700);
@@ -636,8 +641,8 @@ var Game = function () {
         this.ctx.globalCompositeOperation = 'source-over';
         this.ctx.fillStyle = 'rgba(0, 0, 255, .6)';
 
-        this.ctx.shadowColor = 'red';
-        this.ctx.shadowBlur = 15;
+        this.ctx.shadowColor = 'grey';
+        this.ctx.shadowBlur = 100;
         this.ctx.fillRect(this.canvas.width * .25 * num, this.canvas.height * .75, this.canvas.width * .25, this.canvas.height * .1);
       }
     }
