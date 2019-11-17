@@ -405,14 +405,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _cyf = __webpack_require__(6);
+var _christmas = __webpack_require__(9);
 
-var _cyf2 = _interopRequireDefault(_cyf);
+var _christmas2 = _interopRequireDefault(_christmas);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SongList = {
-  cyf: _cyf2.default
+  christmas: _christmas2.default
 };
 
 exports.default = SongList;
@@ -480,43 +480,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _beatmap = __webpack_require__(1);
-
-var _beatmap2 = _interopRequireDefault(_beatmap);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var cyfEasy0 = [1000, 3850, 7850, 12730, 14900, 17100, 19310, 28240, 32000, 37680, 40890, 45470, 50450, 51000, 53320, 55520, 58760, 60910, 64890, 69780, 72800, 76740, 80500, 81590, 85990, 88310, 88900, 90470, 94850, 97240, 97800, 100360];
-
-var cyfEasy1 = [4360, 5660, 7410, 10550, 13790, 16010, 18220, 20490, 20950, 22150, 23210, 24350, 26590, 29360, 31460, 33660, 35460, 37100, 40360, 41780, 44400, 47660, 49880, 51560, 52090, 52630, 54890, 56550, 58160, 60370, 63810, 67640, 68770, 73290, 74600, 76310, 79390, 82600, 83760, 87110, 89410, 91530, 92690, 95960, 98390, 99440];
-
-var cyfEasy2 = [4790, 6850, 8970, 11550, 13250, 15460, 17660, 19870, 21620, 22650, 23770, 25990, 27140, 27720, 28850, 29890, 31020, 33140, 34950, 36000, 36580, 38230, 39850, 42280, 43210, 44870, 46060, 47130, 48200, 49300, 51560, 52090, 54340, 55970, 57650, 59870, 62090, 63170, 64350, 65970, 67050, 69230, 70970, 72040, 73730, 75780, 77840, 79390, 83120, 84810, 87610, 89410, 92060, 93740, 96490, 98790, 99950];
-
-var cyfEasy3 = [6340, 8570, 9400, 14280, 16510, 18720, 19310, 24750, 34090, 38750, 42690, 46590, 48740, 50450, 51000, 53790, 57100, 62620, 65430, 66540, 71500, 75200, 77390, 78290, 80500, 82090, 84290, 85370, 86550, 88310, 88890, 91010, 93210, 94270, 95430, 97220, 97800, 99110, 100360];
-
-var cyfEasy = new _beatmap2.default(cyfEasy0, cyfEasy1, cyfEasy2, cyfEasy3, 2);
-
-var music = {
-  title: "Christmas Memories",
-  songTag: "cyf",
-  songOffset: 1000,
-  easy: cyfEasy,
-  endTime: 10200
-};
-
-exports.default = music;
-
-/***/ }),
+/* 6 */,
 /* 7 */,
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -727,6 +691,43 @@ var Game = function () {
 }();
 
 exports.default = Game;
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _beatmap = __webpack_require__(1);
+
+var _beatmap2 = _interopRequireDefault(_beatmap);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var christmas0 = [2550, 3950, 7250, 7550, 7850, 17100];
+
+var christmas1 = [1850, 3250, 4400, 4700, 5000, 10050, 10350, 10650];
+
+var christmas2 = [1500, 2900, 4400, 4700, 5000, 10050, 10350, 10650];
+
+var christmas3 = [2200, 3600, 7250, 7550, 7850];
+
+var christmas = new _beatmap2.default(christmas0, christmas1, christmas2, christmas3, 2);
+
+var music = {
+  title: "Christmas Memories",
+  songTag: "christmas",
+  songOffset: 1000,
+  easy: christmas,
+  endTime: 10200
+};
+
+exports.default = music;
 
 /***/ })
 /******/ ]);

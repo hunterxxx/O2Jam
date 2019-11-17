@@ -1,6 +1,6 @@
-import cyf from './beatmaps/cyf.js';
+import christmas from './beatmaps/christmas.js';
 const SongList = {
-  cyf: cyf,
+  christmas: christmas,
 };
 
 export default SongList;

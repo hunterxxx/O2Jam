@@ -80,10 +80,9 @@ canvas {
   font-size: 60px;
   font-weight: bolder;
   font-style: italic;
-  background: -webkit-linear-gradient(#FDFDF7, #C6C6C4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  tex
+	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .modal h2 {
