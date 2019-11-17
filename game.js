@@ -1,5 +1,3 @@
-import Beat from './beats/beat.js';
-import BeatColumn from './beats/beat_column.js';
 import * as Song from './songs/songs.js';
 import BeatMap from './beats/beatmap.js';
 import SongList from './songs/song_list.js';
@@ -118,10 +116,6 @@ class Game {
     }, 1);
     setTimeout(() => {
       Song.playSong(selectedSong.songTag);
-      // let audio = document.querySelector(`#${selectedSong.songTag}`);
-      // audio.onended = function() {
-      //   this.openModal('score-modal');
-      // }.bind(this);
     }, selectedSong.songOffset);
     window.addEventListener('keydown', function (event) {
       switch (event.keyCode) {
