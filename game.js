@@ -69,11 +69,6 @@ class Game {
     if (modalId === 'score-modal') {
       let scoreP = document.getElementById("score-p");
       scoreP.innerHTML = `Score: ${this.beatMap.score}`;
-      // let score = document.createElement("p");
-      // score.setAttribute("id", "score");
-      // let textnode = document.createTextNode(`Final Score: ${this.beatMap.score}`);
-      // score.appendChild(textnode);
-      // modal.insertBefore(score, modal.children[1]);
       document.addEventListener('keydown', function () {
         if (event.keyCode === 13) {
           this.resetGame();
@@ -94,7 +89,7 @@ class Game {
 
   keyUp(num, key) {
     this.firedKeys[key] = false;
-    if (this.firedKeys["f"] === false && this.firedKeys["g"] === false && this.firedKeys["h"] === false && this.firedKeys["j"] === false) {
+    if (this.firedKeys["d"] === false && this.firedKeys["f"] === false && this.firedKeys["j"] === false && this.firedKeys["k"] === false) {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       this.drawBorder();
     }
