@@ -32,18 +32,18 @@ class Game {
     for (let x = this.canvas.width / 4; x < this.canvas.width; x += this.canvas.width / 4) {
       this.ctx.fillRect(x, 0, 5, 700);
       this.ctx.font = '20px serif';
-      this.ctx.fillText('F', this.canvas.width * .11, this.canvas.height * .81);
-      this.ctx.fillText('G', this.canvas.width * .36, this.canvas.height * .81);
-      this.ctx.fillText('H', this.canvas.width * .61, this.canvas.height * .81);
-      this.ctx.fillText('J', this.canvas.width * .86, this.canvas.height * .81);
+      this.ctx.fillText('D', this.canvas.width * .11, this.canvas.height * .81);
+      this.ctx.fillText('F', this.canvas.width * .36, this.canvas.height * .81);
+      this.ctx.fillText('J', this.canvas.width * .61, this.canvas.height * .81);
+      this.ctx.fillText('K', this.canvas.width * .86, this.canvas.height * .81);
     }
   }
 
   resetGame() {
-    if ( event.keyCode === 13) {
+    if (event.keyCode === 13) {
       const scoreCanvas = document.getElementById("outer-canvas");
       const ctx = scoreCanvas.getContext("2d");
-      ctx.clearRect(0,0,scoreCanvas.width, scoreCanvas.height);
+      ctx.clearRect(0, 0, scoreCanvas.width, scoreCanvas.height);
       this.closeModal('score-modal');
       this.openModal('intro-modal');
       let scoreP = document.getElementById("score-p");
@@ -74,8 +74,8 @@ class Game {
       // let textnode = document.createTextNode(`Final Score: ${this.beatMap.score}`);
       // score.appendChild(textnode);
       // modal.insertBefore(score, modal.children[1]);
-      document.addEventListener('keydown', function() {
-        if ( event.keyCode === 13) {
+      document.addEventListener('keydown', function () {
+        if (event.keyCode === 13) {
           this.resetGame();
         }
       }.bind(this), false);
@@ -94,7 +94,7 @@ class Game {
 
   keyUp(num, key) {
     this.firedKeys[key] = false;
-    if(this.firedKeys["f"] === false && this.firedKeys["g"] === false && this.firedKeys["h"] === false && this.firedKeys["j"] === false) {
+    if (this.firedKeys["f"] === false && this.firedKeys["g"] === false && this.firedKeys["h"] === false && this.firedKeys["j"] === false) {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       this.drawBorder();
     }
@@ -114,55 +114,55 @@ class Game {
       selectedSong[difficulty].speed);
     this.beatMap.startTime = new Date().getTime();
     this.beatMap.currentTime = new Date().getTime();
-    this.drawInterval = setInterval( () => {
+    this.drawInterval = setInterval(() => {
       this.beatMap.addNotes(0);
       this.beatMap.addNotes(1);
       this.beatMap.addNotes(2);
       this.beatMap.addNotes(3);
       this.beatMap.drawBeatMap();
     }, 1);
-    setTimeout( () => {
+    setTimeout(() => {
       Song.playSong(selectedSong.songTag);
       // let audio = document.querySelector(`#${selectedSong.songTag}`);
       // audio.onended = function() {
       //   this.openModal('score-modal');
       // }.bind(this);
-      }, selectedSong.songOffset);
-    window.addEventListener('keydown', function(event) {
-      switch(event.keyCode) {
-        case 70:
-          this.keyHit(0, "f");
+    }, selectedSong.songOffset);
+    window.addEventListener('keydown', function (event) {
+      switch (event.keyCode) {
+        case 68:
+          this.keyHit(0, "d");
           this.beatMap.keyHit(0);
           break;
-        case 71:
-          this.keyHit(1, "g");
+        case 70:
+          this.keyHit(1, "f");
           this.beatMap.keyHit(1);
           break;
-        case 72:
-          this.keyHit(2, "h");
+        case 74:
+          this.keyHit(2, "j");
           this.beatMap.keyHit(2);
           break;
-        case 74:
-          this.keyHit(3, "j");
+        case 75:
+          this.keyHit(3, "k");
           this.beatMap.keyHit(3);
           break;
         default:
       }
     }.bind(this), false);
 
-    window.addEventListener('keyup', function(event) {
-      switch(event.keyCode) {
+    window.addEventListener('keyup', function (event) {
+      switch (event.keyCode) {
+        case 68:
+          this.keyUp(0, "d");
+          break;
         case 70:
-          this.keyUp(0, "f");
-          break;
-        case 71:
-          this.keyUp(1, "g");
-          break;
-        case 72:
-          this.keyUp(2, "h");
+          this.keyUp(1, "f");
           break;
         case 74:
-          this.keyUp(3, "j");
+          this.keyUp(2, "j");
+          break;
+        case 75:
+          this.keyUp(3, "k");
           break;
         default:
       }

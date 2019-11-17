@@ -588,10 +588,10 @@ var Game = function () {
       for (var x = this.canvas.width / 4; x < this.canvas.width; x += this.canvas.width / 4) {
         this.ctx.fillRect(x, 0, 5, 700);
         this.ctx.font = '20px serif';
-        this.ctx.fillText('F', this.canvas.width * .11, this.canvas.height * .81);
-        this.ctx.fillText('G', this.canvas.width * .36, this.canvas.height * .81);
-        this.ctx.fillText('H', this.canvas.width * .61, this.canvas.height * .81);
-        this.ctx.fillText('J', this.canvas.width * .86, this.canvas.height * .81);
+        this.ctx.fillText('D', this.canvas.width * .11, this.canvas.height * .81);
+        this.ctx.fillText('F', this.canvas.width * .36, this.canvas.height * .81);
+        this.ctx.fillText('J', this.canvas.width * .61, this.canvas.height * .81);
+        this.ctx.fillText('K', this.canvas.width * .86, this.canvas.height * .81);
       }
     }
   }, {
@@ -687,20 +687,20 @@ var Game = function () {
       }, selectedSong.songOffset);
       window.addEventListener('keydown', function (event) {
         switch (event.keyCode) {
-          case 70:
-            this.keyHit(0, "f");
+          case 68:
+            this.keyHit(0, "d");
             this.beatMap.keyHit(0);
             break;
-          case 71:
-            this.keyHit(1, "g");
+          case 70:
+            this.keyHit(1, "f");
             this.beatMap.keyHit(1);
             break;
-          case 72:
-            this.keyHit(2, "h");
+          case 74:
+            this.keyHit(2, "j");
             this.beatMap.keyHit(2);
             break;
-          case 74:
-            this.keyHit(3, "j");
+          case 75:
+            this.keyHit(3, "k");
             this.beatMap.keyHit(3);
             break;
           default:
@@ -709,17 +709,17 @@ var Game = function () {
 
       window.addEventListener('keyup', function (event) {
         switch (event.keyCode) {
+          case 68:
+            this.keyUp(0, "d");
+            break;
           case 70:
-            this.keyUp(0, "f");
-            break;
-          case 71:
-            this.keyUp(1, "g");
-            break;
-          case 72:
-            this.keyUp(2, "h");
+            this.keyUp(1, "f");
             break;
           case 74:
-            this.keyUp(3, "j");
+            this.keyUp(2, "j");
+            break;
+          case 75:
+            this.keyUp(3, "k");
             break;
           default:
         }
